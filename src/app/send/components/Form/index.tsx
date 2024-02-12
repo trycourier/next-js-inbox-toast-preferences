@@ -118,7 +118,7 @@ const SendForm = ({}: ISendForm) => {
                     Add Action
                 </Button>
                 <Button variant="contained" type="submit">
-                    Kewl button
+                    Send to Inbox
                 </Button>
             </Stack>
         </Stack>
