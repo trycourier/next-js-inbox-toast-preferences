@@ -7,8 +7,6 @@ import NavBar from '@/components/NavBar';
 import theme from '@/theme';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import { ThemeProvider } from '@mui/material/styles';
-import { cookies } from 'next/headers';
-import { ulid } from 'ulid';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -21,12 +19,6 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-    // setting a random ulid for demo purposes
-    const cookieStore = cookies();
-    let user_id = cookieStore.get('user_id');
-    if (!user_id) {
-        cookieStore.set('user_id', ulid());
-    }
     return (
         <html lang="en">
             <body className={inter.className}>
