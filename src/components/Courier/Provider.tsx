@@ -12,10 +12,10 @@ const CourierProvider = ({ children }: ICourierProvider) => {
             .split('; ')
             .map((v) => v.split(/=(.*)/s).map(decodeURIComponent))
     )['user_id'];
-
     return (
         <Provider
-            brandId="twilio"
+            // userId={'2301700f-54c4-41e7-bebb-f989de9ffbd2'}
+            // clientKey={'YjM2YWI1MTktYjVhOS00MjRjLTk1M2EtZjU5ZGNiNmFkYmQ2='}
             userId={user_id}
             clientKey={process.env.NEXT_PUBLIC_COURIER_CLIENT_KEY}
         >

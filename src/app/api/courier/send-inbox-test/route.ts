@@ -40,6 +40,13 @@ export async function POST(
                     method: 'single',
                     channels: ['inbox'],
                 },
+                // channels: {
+                //     inbox: {
+                //         override: {
+                //             icon: "https://courier.com/favicon.ico"
+                //         }
+                //     }
+                // }
             },
         });
         return Response.json(res);
