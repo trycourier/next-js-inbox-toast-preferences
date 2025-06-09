@@ -13,7 +13,6 @@ interface IUserMenu {}
 
 const settings = [
     { href: '/profile', label: 'Profile' },
-    { href: '/send', label: 'Send Inbox' },
 ];
 
 const UserMenu = ({}: IUserMenu) => {
