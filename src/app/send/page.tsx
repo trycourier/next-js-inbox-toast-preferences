@@ -7,8 +7,15 @@ import SendForm from './components/Form';
 
 const courier = new CourierClient({
     fetcher: async (args) => {
-        const r = await fetch(args.url, args).then((r) => r.json());
-        return { body: r.data, error: {}, ok: r.ok, status: r.status };
+        const response = await fetch(args.url, args);
+        const data = await response.json();
+        return {
+            body: data.data,
+            error: {},
+            ok: response.ok,
+            status: response.status,
+            rawResponse: response
+        };
     },
 });
 
